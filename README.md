@@ -1,23 +1,30 @@
-<h1 align="center">Project Title</h1>
-<p align="center">Project description</p>
+<h1 align="center">Frontend Mentor - Calculator App</h1>
+<p align="center">A calculator app with theme color switcher made with React</p>
+<br/>
+<div>
+    <img src="images/cover.jpg">
+</div>
 <br/>
 <h2>Features ⚙️✨</h2>
 <ul>
-    <li>Feature 1 - ✅</li>
-    <li>Feature 2 - 🚧</li>
-    <li>Feature 3 - ❌</li>
+    <li>When user click on toggle, colors change according to themes ❌</li>
+    <li>When user click on Reset, calculator is reset ❌</li>
+    <li>When user click on Del, last character number is removed 3 ❌</li>
+    <li>When user click on Button Number, the number is added to calculus ❌</li>
+    <li>When user click on Symbol Button, the symbol is added to calculus ❌</li>
+    <li>When user click on Equal Button, the result is calculated accordingly to last result ❌</li>
 </ul>
 <br/>
 <h2>Get started 💻💿</h2>
 <ol>
     <li>
         <code>
-            git clone project_link
+            git clone https://github.com/bjordandev/fm-calculator-app
         </code>
     </li>
     <li>
         <code>
-            cd project_name
+            cd fm-calculator-app
         </code>
     </li>
     <li>
@@ -52,4 +59,3 @@
       <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Hosted project">  
     </a>
 </p>
-
