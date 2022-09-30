@@ -2,7 +2,7 @@ import "./reset.css";
 import './index.css';
 
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import { themeOne } from "./config/themes";
 import ThemeContext from "./contexts/themes.context";
