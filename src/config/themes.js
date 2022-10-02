@@ -1,5 +1,3 @@
-const bodyStyle = getComputedStyle(document.body)
-
 const themeOne = {
     backgroundColor: "hsl(222, 26%, 31%)",
     backgroundScreenColor: "hsl(224, 36%, 15%)",
