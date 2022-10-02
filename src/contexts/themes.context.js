@@ -1,7 +1,5 @@
 import React from "react";
 
-import { themeOne } from "../config/themes";
-
-const ThemeContext = React.createContext(themeOne);
+const ThemeContext = React.createContext();
 
 export default ThemeContext; 
