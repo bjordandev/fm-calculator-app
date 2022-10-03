@@ -1,0 +1,9 @@
+.buttonEqual {
+    background-color: var(--buttonEqualBackgroundColor);
+    box-shadow: 0px 6px 0px var(--buttonEqualShadowColor);
+    color: var(--buttonEqualTextColor);
+}
+
+.buttonEqual::before {
+    background-color: var(--buttonEqualHoverBackgroundColor);
+}
