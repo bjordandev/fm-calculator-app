@@ -1,19 +1,12 @@
-import "./reset.css";
-import './index.css';
+import "./styles/reset.scss";
+import './styles/index.scss';
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import { themeOne } from "./config/themes";
-import ThemeContext from "./contexts/themes.context";
 
 import App from "./App";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
 
-root.render(
-<ThemeContext.Provider value={themeOne}>
-    <App/>
-</ThemeContext.Provider>
-);
+root.render(<App/>);
