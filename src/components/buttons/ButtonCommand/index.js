@@ -1,11 +1,14 @@
-import React from "react";
+import commonClasses from "../common.module.css";
 import classes from "./index.module.css";
+
+import React from "react";
 
 function ButtonCommand(props) {
     const { children, onClick } = props;
+    const className = `${commonClasses.button} ${classes.buttonCommand}`
 
     return (
-        <button className={classes.buttonCommand} onClick={onClick}>
+        <button className={className} onClick={onClick}>
             {children}
         </button>
     )
