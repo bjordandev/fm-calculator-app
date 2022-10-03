@@ -1,0 +1,49 @@
+.buttonSymbol {
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    z-index:1;
+    height:60px;
+    border-radius:3px;
+
+    background-color: var(--buttonSymbolBackgroundColor);
+    box-shadow: 0px 6px 0px var(--buttonSymbolShadowColor);
+    color: var(--buttonSymbolTextColor);
+
+    text-transform:uppercase;
+    font-size:20px;
+    font-weight:700;
+}
+
+.buttonSymbol::before {
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+
+    background-color: var(--buttonSymbolHoverBackgroundColor);
+    opacity:0;
+}
+
+.buttonSymbol:hover::before {
+    opacity:1;
+}
+
+@media screen and (min-width: 768px) {
+    .buttonSymbol {
+        font-size:32px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .buttonSymbol::before {
+        transition: opacity 0.2s ease;
+    }
+}
+
