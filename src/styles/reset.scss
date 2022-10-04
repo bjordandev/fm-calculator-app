@@ -74,3 +74,9 @@ button {
 	display:block;
 	width:100%;
 }
+
+input[type="radio"] {
+	position:absolute;
+	appearance: none;
+	background-color: #fff;
+}
