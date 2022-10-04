@@ -1,0 +1,25 @@
+.calculatorControls { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px 60px 60px 60px;
+    gap: 17px 17px; 
+    grid-template-areas: 
+        "zone-1 zone-2 zone-3 zone-4"
+        "zone-5 zone-6 zone-7 zone-8"
+        "zone-9 zone-10 zone-11 zone-12"
+        "zone-13 zone-13 zone-14 zone-14";
+
+    padding: 22px;
+    border-radius: 6px;
+
+    background-color: var(--backgroundKeypadColor);
+    width: 88%;
+    max-width: 540px;
+}
+
+@media screen and (min-width: 768px) {
+    .calculatorControls {
+        gap: 22px 22px;
+        padding: 30px;
+    }
+}
