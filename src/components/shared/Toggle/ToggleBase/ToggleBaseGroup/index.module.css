@@ -1,0 +1,22 @@
+.toggleBaseGroup {
+    position:relative;
+}
+
+.toggleBaseLabel {
+    position:absolute;
+    display:block;
+    width:inherit;
+    height:inherit;
+   
+    opacity:0;
+}
+
+.toggleBaseInput:checked + .toggleBaseLabel {
+    opacity:1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .toggleBaseLabel {
+        transition: opacity 0.2s ease-in-out;
+    }
+}

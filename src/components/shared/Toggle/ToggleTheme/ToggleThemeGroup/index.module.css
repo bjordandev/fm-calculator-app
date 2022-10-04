@@ -1,0 +1,9 @@
+.toggleThemeGroup {
+    width:17px;
+    height:17px;
+}
+
+.toggleThemeLabel {
+    border-radius: 50%;
+    background-color: var(--buttonToggleColor);
+}
