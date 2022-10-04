@@ -1,0 +1,39 @@
+.radioMultiple {
+    display:flex;
+    justify-content: space-between;
+
+    margin: 15px 15px;
+    border-radius:15px;
+    width: 72px;
+    padding:5px;
+    
+    background-color: var(--backgroundToggleColor);
+}
+
+.radioMultipleGroup {
+    position:relative;
+    width:17px;
+    height:17px;
+}
+
+.radioMultipleLabel {
+    position:absolute;
+    display:block;
+
+    width:inherit;
+    height:inherit;
+   
+    border-radius: 50%;
+    background-color: var(--buttonToggleColor);
+    opacity:0;
+}
+
+.radioMultipleInput:checked + .radioMultipleLabel {
+    opacity:1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .radioMultipleLabel {
+        transition: opacity 0.2s ease-in-out;
+    }
+}
