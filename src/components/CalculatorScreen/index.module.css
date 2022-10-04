@@ -1,0 +1,56 @@
+.calculatorScreen {
+    position:relative;
+    overflow-x: hidden;
+
+    height:88px;
+    border-radius: 6px;
+
+    background-color:var(--backgroundScreenColor);
+}
+
+.calculatorScreenText {
+    position:absolute; 
+    
+    top:50%;
+    right: 25px;
+    transform:translateY(-50%);
+
+    font-size:40px;
+    font-weight:700;
+    text-transform: uppercase;
+    text-align: right;
+
+    color: var(--screenTextColor);
+}
+
+@keyframes slideWithOpacity {
+    0% {
+        opacity:0;
+        transform: translate(100%, -50%);
+    }
+
+    100% {
+        opacity:1;
+        transform: translate(0, -50%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .calculatorScreen {
+        height:127px;
+    }
+
+    .calculatorScreenText {
+        right: 35px;
+        font-size:50px;
+    }
+    
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .calculatorScreenText {
+        animation-name: slideWithOpacity;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.8s;
+    }
+}
