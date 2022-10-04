@@ -1,4 +1,4 @@
-.button {
+.buttonBase {
     position:relative;
     display:flex;
     align-items: center;
@@ -12,7 +12,7 @@
     font-weight:700;
 }
 
-.button::before {
+.buttonBase::before {
     content:"";
 
     position:absolute;
@@ -27,18 +27,18 @@
     opacity:0;
 }
 
-.button:hover::before {
+.buttonBase:hover::before {
     opacity:1;
 }
 
 @media screen and (min-width: 768px) {
-    .button {
+    .buttonBase {
         font-size:32px;
     }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .button::before {
+    .buttonBase::before {
         transition: opacity 0.2s ease;
     }
 }
