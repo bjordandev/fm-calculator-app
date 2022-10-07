@@ -4,6 +4,30 @@
 }
 
 .toggleThemeLabel {
+    position:relative;
+
     border-radius: 50%;
     background-color: var(--buttonToggleColor);
+}
+
+.toggleThemeLabel::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: inherit;
+    background-color: var(--buttonToggleHoverColor);
+    opacity:0;
+}
+
+.toggleThemeLabel:hover::before {
+    opacity:1;    
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .toggleThemeLabel::before {
+        transition: opacity 0.2s ease;
+    }
 }
