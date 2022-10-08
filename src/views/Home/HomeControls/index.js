@@ -15,49 +15,55 @@ function HeaderControls() {
                     <ButtonSymbol>7</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-2"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>8</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-3"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>9</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-4"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonCommand>Del</ButtonCommand>
                 </div>
                 <div style={{gridArea: "zone-5"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>4</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-6"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>5</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-7"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>6</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-8"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>+</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-9"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>1</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-10"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>2</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-11"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>3</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-12"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>-</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-13"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
-                </div>
-                <div style={{gridArea: "zone-13"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>.</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-14"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol>0</ButtonSymbol>
                 </div>
-                <div style={{gridArea: "zone-14"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                <div style={{gridArea: "zone-15"}}>
+                    <ButtonSymbol>/</ButtonSymbol>
+                </div>
+                <div style={{gridArea: "zone-16"}}>
+                    <ButtonSymbol>x</ButtonSymbol>
+                </div>
+                <div style={{gridArea: "zone-17"}}>
+                    <ButtonCommand>Reset</ButtonCommand>
+                </div>
+                <div style={{gridArea: "zone-18"}}>
+                    <ButtonEqual>=</ButtonEqual>
                 </div>
             </CalculatorControls>
         </div>
