@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
-import CalculatorTheme from "./components/CalculatorTheme";
-import CalculatorTitle from "./components/CalculatorTitle";
+
+import Home from "./views/Home";
 
 function App() {
     const [theme, setTheme] = useState('one');
@@ -23,8 +23,7 @@ function App() {
     
     return (
         <main className="app" data-theme={theme}>
-            <CalculatorTitle />
-            <CalculatorTheme />
+            <Home />
         </main>
     );
 }
