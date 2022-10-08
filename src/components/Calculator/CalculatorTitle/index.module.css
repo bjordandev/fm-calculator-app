@@ -1,0 +1,6 @@
+.calculatorTitle {
+    font-size: 22px;
+    text-transform: lowercase;
+    color: var(--screenTextColor);
+    background-color:transparent;
+}
