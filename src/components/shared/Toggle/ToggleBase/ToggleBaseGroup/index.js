@@ -6,6 +6,9 @@ function ToggleBaseGroup(props) {
     const {
         radioId,
         radioName,
+        radioValue,
+        radioChecked,
+        handleChange,
         groupClassName,
         inputClassName,
         labelClassName
@@ -14,7 +17,10 @@ function ToggleBaseGroup(props) {
     return (
         <div className={`${classes.toggleBaseGroup} ${groupClassName}`}>
             <input id={radioId} 
-                   name={radioName} 
+                   name={radioName}
+                   value={radioValue}
+                   checked={radioChecked}
+                   onChange={handleChange} 
                    className={`${classes.toggleBaseInput} ${inputClassName}`} 
                    type="radio" 
             />
@@ -36,6 +42,9 @@ ToggleBaseGroup.defaultProps = {
 ToggleBaseGroup.propTypes = {
     radioId:PropTypes.string,
     radioName:PropTypes.string,
+    radioValue:PropTypes.string,
+    radioChecked:PropTypes.bool,
+    handleChange:PropTypes.func,
     groupClassName:PropTypes.string,
     inputClassName:PropTypes.string
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 const ThemeContext = React.createContext({
-    theme:"one",
+    value:"one",
     setTheme(id) {
 
     }
@@ -13,4 +13,6 @@ const ThemeContextConsumer = ThemeContext.Consumer;
 export {
     ThemeContextProvider,
     ThemeContextConsumer
-} 
+}
+
+export default ThemeContext
