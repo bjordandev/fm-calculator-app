@@ -1,6 +1,7 @@
 import classes from "./index.module.css"
 import React from "react"; 
 
+
 function CalculatorScreen(props) {
     const { children } = props; 
     return (
@@ -12,4 +13,4 @@ function CalculatorScreen(props) {
     )
 }
 
-export default CalculatorScreen;
+export default React.memo(CalculatorScreen);

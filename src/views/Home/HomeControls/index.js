@@ -6,14 +6,69 @@ import ButtonSymbol from "../../../components/shared/Button/ButtonSymbol";
 import ButtonCommand from "../../../components/shared/Button/ButtonCommand";
 import ButtonEqual from "../../../components/shared/Button/ButtonEqual";
 
+import * as Calculus from "../../../utils/calculus.utils";
 
-function HeaderControls(props) {
+function HomeControls(props) {
     const { 
-        buttonSymbolHandleClick,
-        buttonDelHandleClick,
-        buttonResetHandleClick,
-        buttonEqualHandleClick 
+        mode,
+        setMode,
+        setResult 
     } = props;
+
+    console.log("Rendering HomeControls");
+
+    const buttonSymbolHandleClick = (e) => {
+        const { value }  = e.target ;
+
+        setResult(result => {
+            if (mode === "calcul") {
+                setMode("input");
+
+                if (Calculus.isCharOperation(value)) { 
+                    return Calculus.addToken(result, value);
+                } else {
+                    return value.toString();
+                }
+            }
+
+            return Calculus.addToken(result, value);
+        })
+    };
+
+    const buttonDelHandleClick = (e) => {
+        setResult(result => {
+            if (mode === "calcul") {
+                setMode("input");
+                setResult("0");
+            } else {
+                const resultArray = result.split("");
+                resultArray.pop();
+
+                if (resultArray.length === 0) {
+                    resultArray.push("0");
+                }
+
+                return resultArray.join("");
+            }            
+        });
+    };
+
+    const buttonResetHandleClick = (e) => {
+        setResult("0");
+    };
+
+    const buttonEqualHandleClick = (e) => {
+        setResult(result => {
+            setMode("calcul");
+            if (!Calculus.isValidOperation(result)) return result;
+
+            try {
+                return (Math.floor(eval(result) * (10**6)) / (10**6)).toString();
+            } catch(e) {
+                return "Error"
+            }
+        });
+    };
 
     return (
         <div className={classes.headerControls}>
@@ -77,4 +132,4 @@ function HeaderControls(props) {
     )
 }
 
-export default HeaderControls
+export default React.memo(HomeControls);
