@@ -3,11 +3,11 @@ import classes from "./index.module.css"
 
 import CalculatorScreen from "../../../components/Calculator/CalculatorScreen";
 
-function HomeScreen() {
+function HomeScreen({result}) {
     return (
         <div className={classes.homeScreen}>
             <CalculatorScreen>
-                100
+                {result}
             </CalculatorScreen>
         </div>
     )

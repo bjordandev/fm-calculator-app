@@ -7,63 +7,70 @@ import ButtonCommand from "../../../components/shared/Button/ButtonCommand";
 import ButtonEqual from "../../../components/shared/Button/ButtonEqual";
 
 
-function HeaderControls() {
+function HeaderControls(props) {
+    const { 
+        buttonSymbolHandleClick,
+        buttonDelHandleClick,
+        buttonResetHandleClick,
+        buttonEqualHandleClick 
+    } = props;
+
     return (
         <div className={classes.headerControls}>
             <CalculatorControls>
                 <div style={{gridArea: "zone-1"}}>
-                    <ButtonSymbol>7</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="7">7</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-2"}}>
-                    <ButtonSymbol>8</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="8">8</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-3"}}>
-                    <ButtonSymbol>9</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="9">9</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-4"}}>
-                    <ButtonCommand>Del</ButtonCommand>
+                    <ButtonCommand onClick={buttonDelHandleClick}>Del</ButtonCommand>
                 </div>
                 <div style={{gridArea: "zone-5"}}>
-                    <ButtonSymbol>4</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="4">4</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-6"}}>
-                    <ButtonSymbol>5</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="5">5</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-7"}}>
-                    <ButtonSymbol>6</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="6">6</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-8"}}>
-                    <ButtonSymbol>+</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="+">+</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-9"}}>
-                    <ButtonSymbol>1</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="1">1</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-10"}}>
-                    <ButtonSymbol>2</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="2">2</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-11"}}>
-                    <ButtonSymbol>3</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="3">3</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-12"}}>
-                    <ButtonSymbol>-</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="-">-</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-13"}}>
-                    <ButtonSymbol>.</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value=".">.</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-14"}}>
-                    <ButtonSymbol>0</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="0">0</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-15"}}>
-                    <ButtonSymbol>/</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="/">/</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-16"}}>
-                    <ButtonSymbol>x</ButtonSymbol>
+                    <ButtonSymbol onClick={buttonSymbolHandleClick} value="*">x</ButtonSymbol>
                 </div>
                 <div style={{gridArea: "zone-17"}}>
-                    <ButtonCommand>Reset</ButtonCommand>
+                    <ButtonCommand onClick={buttonResetHandleClick}>Reset</ButtonCommand>
                 </div>
                 <div style={{gridArea: "zone-18"}}>
-                    <ButtonEqual>=</ButtonEqual>
+                    <ButtonEqual onClick={buttonEqualHandleClick}>=</ButtonEqual>
                 </div>
             </CalculatorControls>
         </div>
