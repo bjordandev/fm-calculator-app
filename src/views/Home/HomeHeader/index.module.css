@@ -1,0 +1,10 @@
+.homeHeader {
+    display:flex;
+    justify-content:space-between;
+    padding-top:25px;
+    margin-bottom: 25px;
+}
+
+.homeHeaderTitle {
+    align-self: center;
+}
