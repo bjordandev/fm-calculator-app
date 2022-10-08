@@ -12,11 +12,12 @@
     --buttonSymbolShadowColor: hsl(28, 16%, 65%);
     --buttonCommandShadowColor: hsl(224, 28%, 35%);
     --buttonEqualShadowColor: hsl(6, 70%, 34%);
-    --buttonCommandTextColor: hsl(0, 0, 100%);
-    --buttonEqualTextColor: hsl(0, 0, 100%);
+    --buttonCommandTextColor: white;
+    --buttonEqualTextColor: white;
     --buttonSymbolTextColor: hsl(221, 14%, 31%);
-    --screenTextColor: hsl(0, 0, 100%);
-    --buttonToggleColor: hsl(6, 63%, 50%); 
+    --screenTextColor: white;
+    --buttonToggleColor: hsl(6, 63%, 50%);
+    --buttonToggleHoverColor: hsl(6, 63%, 60%); 
 }
 
 .app[data-theme='two'] {
@@ -33,11 +34,13 @@
     --buttonSymbolShadowColor: hsl(35, 11%, 61%);
     --buttonCommandShadowColor: hsl(185, 58%, 25%);
     --buttonEqualShadowColor: hsl(25, 99%, 27%);
-    --buttonCommandTextColor: hsl(0, 0, 100%);
-    --buttonEqualTextColor: hsl(0, 0, 100%);
+    --buttonCommandTextColor: white;
+    --buttonEqualTextColor: white;
     --buttonSymbolTextColor: hsl(60, 10%, 19%);
     --screenTextColor: hsl(60, 10%, 19%);
     --buttonToggleColor: hsl(25, 98%, 40%);
+    --buttonToggleHoverColor: hsl(25, 98%, 50%);
+    
 }
 
 .app[data-theme='three'] {
@@ -54,9 +57,10 @@
     --buttonSymbolShadowColor: hsl(290, 70%, 36%);
     --buttonCommandShadowColor: hsl(285, 91%, 52%);
     --buttonEqualShadowColor: hsl(177, 92%, 70%);
-    --buttonCommandTextColor: hsl(0, 0, 100%);
+    --buttonCommandTextColor: hsl(100, 100, 100%);
     --buttonEqualTextColor: hsl(198, 20%, 13%);
     --buttonSymbolTextColor: hsl(52, 100%, 62%);
     --screenTextColor: hsl(52, 100%, 62%);
     --buttonToggleColor: hsl(176, 100%, 44%);
+    --buttonToggleHoverColor: hsl(176, 100%, 54%);
 }

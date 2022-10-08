@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
-
-import { ThemeContextProvider } from "./contexts/themes.context";
+import CalculatorTheme from "./components/CalculatorTheme";
+import CalculatorTitle from "./components/CalculatorTitle";
 
 function App() {
     const [theme, setTheme] = useState('one');
@@ -20,11 +20,11 @@ function App() {
                 break;
         }
     }
-
+    
     return (
         <main className="app" data-theme={theme}>
-            <ThemeContextProvider value={{ theme, setTheme: handleTheme }}>
-            </ThemeContextProvider>
+            <CalculatorTitle />
+            <CalculatorTheme />
         </main>
     );
 }

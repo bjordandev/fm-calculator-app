@@ -2,8 +2,8 @@ import React from "react";
 import classes from "./index.module.css"
 
 
-import ToggleTheme from "../shared/Toggle/ToggleTheme";
-import ToggleThemeGroup from "../shared/Toggle/ToggleTheme/ToggleThemeGroup";
+import ToggleTheme from "../../shared/Toggle/ToggleTheme";
+import ToggleThemeGroup from "../../shared/Toggle/ToggleTheme/ToggleThemeGroup";
 
 function CalculatorTheme() {
     return (
