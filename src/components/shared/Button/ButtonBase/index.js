@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 
 function ButtonBase(props) {
     const { children, 
-            onClick, 
             customClassName 
     } = props;
     
     return (
         <button className={`${classes.buttonBase} ${customClassName}`} 
-                onClick={onClick}
+                {...props}
         >
             {children}
         </button>
