@@ -98,7 +98,7 @@ function extractOperations(str) {
 }
 
 function isValidOperation(_str) {
-    if (str === undefined || str === null) return;
+    if (_str === undefined || _str === null) return;
     
     const str = _str.toLowerCase();
 
