@@ -7,9 +7,15 @@ function ButtonBase(props) {
             customClassName 
     } = props;
     
+    const propsToAdd = {
+        ...props
+    };
+
+    delete propsToAdd["customClassName"];
+
     return (
         <button className={`${classes.buttonBase} ${customClassName}`} 
-                {...props}
+                {...propsToAdd}
         >
             {children}
         </button>
