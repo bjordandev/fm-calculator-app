@@ -25,6 +25,8 @@ function isStringNumber(char) {
 }
 
 function addToken(str, token) {
+    if (str === undefined || str === null) return;
+
     if (token === ".") {
         for (let i = 0 ; i < str.length ; i++) {
             if (str[i] === ".") 
@@ -45,6 +47,8 @@ function addToken(str, token) {
 }
 
 function extractNumbers(str) {
+    if (str === undefined || str === null) return;
+
     let currentString = "";
     const numbers = [];
 
@@ -71,6 +75,8 @@ function extractNumbers(str) {
 }
 
 function extractOperations(str) {
+    if (str === undefined || str === null) return;
+
     let currentString = "";
 
     const operations = [];
@@ -92,6 +98,8 @@ function extractOperations(str) {
 }
 
 function isValidOperation(_str) {
+    if (str === undefined || str === null) return;
+    
     const str = _str.toLowerCase();
 
     for (let i = 0 ; i < str.length ; i++) {
