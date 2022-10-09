@@ -15,8 +15,6 @@ function HomeControls(props) {
         setResult 
     } = props;
 
-    console.log("Rendering HomeControls");
-
     const buttonSymbolHandleClick = (e) => {
         const { value }  = e.target ;
 
