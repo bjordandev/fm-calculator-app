@@ -26,8 +26,6 @@ function HomeControls(props) {
 
                 const isValueOperation = Validator.isStringValidToken(value, [...CalculusConst.ADDER_SYMBOLS, ...CalculusConst.MULTIPLIER_SYMBOLS])
 
-                console.log(isValueOperation);
-
                 if (isValueOperation) return Calculus.addTokenToMathExpression(result, value);
                 return value.toString();
             }
