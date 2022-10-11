@@ -10,10 +10,6 @@ const MATH_SYMBOLS = [
 
 ]; 
 
-(() => {
-  console.log(MATH_SYMBOLS);
-})();
-
 export {
   ADDER_SYMBOLS,
   MULTIPLIER_SYMBOLS,

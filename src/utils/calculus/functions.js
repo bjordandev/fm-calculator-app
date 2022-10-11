@@ -15,8 +15,6 @@ import {
 } from "../validator/functions";
 
 function addTokenToMathExpressionSelectCase(expression, token) {
-    console.log(expression);
-
     const cases = [
         "IS_TOKEN_POINT",
         "START_WITH_0_OR_POINT",
@@ -61,7 +59,6 @@ function addTokenToMathExpression(expression, token) {
         case "IS_TOKEN_POINT":
             return expression;
         case "START_WITH_0":
-            console.log("bite");
             return token.toString();
         case "END_WITH_NUMBER_OR_MULTIPLIER":
             return expression + token;
@@ -169,9 +166,6 @@ function isExpressionValid(_expression) {
 
     const extractedNumbers = extractNumbersFromExpression(expression);
     const extractedOperations = extractOperationsFromExpression(expression);
-
-    console.log(extractedNumbers);
-    console.log(extractedOperations);
 
     return extractedNumbers.length === extractedOperations.length + 1;
 }
