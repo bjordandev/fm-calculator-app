@@ -6,7 +6,9 @@ import ButtonSymbol from "../../../components/shared/Button/ButtonSymbol";
 import ButtonCommand from "../../../components/shared/Button/ButtonCommand";
 import ButtonEqual from "../../../components/shared/Button/ButtonEqual";
 
-import * as Calculus from "../../../utils/calculus.utils";
+import * as Calculus from "../../../utils/calculus/functions"
+import * as CalculusConst from "../../../utils/calculus/constants";
+import * as Validator from "../../../utils/validator/functions";
 
 function HomeControls(props) {
     const { 
@@ -22,15 +24,16 @@ function HomeControls(props) {
             if (mode === "calcul") {
                 setMode("input");
 
-                if (Calculus.isCharOperation(value)) { 
-                    return Calculus.addToken(result, value);
-                } else {
-                    return value.toString();
-                }
+                const isValueOperation = Validator.isStringValidToken(value, [...CalculusConst.ADDER_SYMBOLS, ...CalculusConst.MULTIPLIER_SYMBOLS])
+
+                console.log(isValueOperation);
+
+                if (isValueOperation) return Calculus.addTokenToMathExpression(result, value);
+                return value.toString();
             }
 
-            return Calculus.addToken(result, value);
-        })
+            return Calculus.addTokenToMathExpression(result, value);
+        });
     };
 
     const buttonDelHandleClick = (e) => {
@@ -58,13 +61,13 @@ function HomeControls(props) {
     const buttonEqualHandleClick = (e) => {
         setResult(result => {
             setMode("calcul");
-            if (!Calculus.isValidOperation(result)) return result;
 
-            try {
-                return (Math.floor(eval(result) * (10**6)) / (10**6)).toString();
-            } catch(e) {
-                return "Error"
-            }
+            const isResultValidExpression = Calculus.isExpressionValid(result);
+
+            if (!isResultValidExpression) return "Erreur";
+
+            const evaluatedResult = eval(result);
+            return evaluatedResult.toString();
         });
     };
 
